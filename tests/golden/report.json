@@ -1,0 +1,36 @@
+{
+  "freshness": {
+    "age_seconds": 172800.0,
+    "newest": "2026-01-01T00:00:00+00:00",
+    "ok": false
+  },
+  "passed": false,
+  "row_count": 3,
+  "truncated": false,
+  "violations": [
+    {
+      "column": "id",
+      "message": "value repeats an earlier row",
+      "row_index": 1,
+      "rule": "unique"
+    },
+    {
+      "column": "email",
+      "message": "value does not match the required pattern",
+      "row_index": 1,
+      "rule": "pattern"
+    },
+    {
+      "column": "id",
+      "message": "value is below the minimum",
+      "row_index": 2,
+      "rule": "range"
+    },
+    {
+      "column": "updated_at",
+      "message": "newest value is older than the maximum age PT24H",
+      "row_index": null,
+      "rule": "freshness"
+    }
+  ]
+}
