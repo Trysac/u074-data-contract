@@ -1,13 +1,13 @@
 # data-contract
 
-> Validate tabular datasets against a JSON data contract: schema, types, ranges, uniqueness, SQL-style row rules and a freshness SLA with an injected clock Python package `trysac-data-contract`, import name `data_contract`, MIT licensed,
-> Python >= 3.10, no runtime dependencies.
+> Validate tabular datasets against a JSON data contract: schema, types, ranges, uniqueness, SQL-style row rules and a freshness SLA with an injected clock. Python package `trysac-data-contract`, import name `data_contract`, MIT licensed, Python >= 3.10, no runtime dependencies.
 
 ## Docs
 
-- [README](README.md): problem, install, usage example
-- [AGENTS](AGENTS.md): commands, folder map, conventions, limits
+- [README](README.md): problem, install, usage example, public API
 - [Architecture](docs/ARCHITECTURE.md): shape of the package and its public API
+- [Contract format](docs/CONTRACT_FORMAT.md): columns, row rules, freshness
+- [Security](docs/SECURITY.md): threat model
 - [Testing](docs/TESTING.md): how to run and extend the tests
 
 ## Optional

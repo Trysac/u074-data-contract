@@ -9,4 +9,5 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Added the `data_contract` library: JSON data contracts with schema, type, range, pattern and uniqueness checks, SQL-style three-valued row rules, an injected-clock freshness SLA, a CSV reader and text/JSON reports.
 - Initial project structure from the factory utility template.

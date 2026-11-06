@@ -1,21 +1,32 @@
-"""Validate tabular datasets against a JSON data contract: schema, types, ranges, uniqueness, SQL-style row rules and a freshness SLA with an injected clock"""
+"""Validate tabular datasets against a JSON data contract."""
 
 from __future__ import annotations
 
-__all__ = ["__version__", "normalize"]
+import logging
+
+from .contract import ColumnSpec, Contract, FreshnessSpec, RowRule, load_contract
+from .csvio import read_csv_rows
+from .errors import ContractError, DataContractError
+from .rendering import render
+from .validation import FreshnessResult, ValidationReport, Violation, validate
+
+__all__ = [
+    "ColumnSpec",
+    "Contract",
+    "ContractError",
+    "DataContractError",
+    "FreshnessResult",
+    "FreshnessSpec",
+    "RowRule",
+    "ValidationReport",
+    "Violation",
+    "__version__",
+    "load_contract",
+    "read_csv_rows",
+    "render",
+    "validate",
+]
 
 __version__ = "0.1.0"
 
-
-def normalize(value: str) -> str:
-    """Return ``value`` trimmed and lower-cased.
-
-    Placeholder API created by the template: replace it with the utility's real behavior.
-
-    Raises:
-        ValueError: if ``value`` is empty or only whitespace.
-    """
-    cleaned = value.strip()
-    if not cleaned:
-        raise ValueError("value must not be empty")
-    return cleaned.lower()
+logging.getLogger(__name__).addHandler(logging.NullHandler())
